@@ -7,7 +7,7 @@ RUN mkdir -p /app && chown -R nobody.nobody /app
 
 WORKDIR /app
 
-ARG IREDAPD_VERSION=5.0.3
+ARG IREDAPD_VERSION=5.0.4
 
 RUN curl -L https://github.com/iredmail/iRedAPD/archive/refs/tags/${IREDAPD_VERSION}.tar.gz | tar -xz --strip-components=1 \
   && pip install -r requirements.txt --no-cache-dir \
