@@ -1,6 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
-  ]
+    "config:base",
+    "docker:enableMajor"
+  ],
+  "regexManagers": [{
+    "fileMatch": ["^Dockerfile$"],
+    "matchStrings": ["ARG IREDAPD_VERSION=(?<currentValue>.*?)\n"],
+    "versioningTemplate": "loose",
+    "depNameTemplate": "iredmail/iRedAPD",
+    "datasourceTemplate": "github-tags"
+  }]
 }
