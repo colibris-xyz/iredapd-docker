@@ -1,4 +1,4 @@
-FROM python:3.10.4-alpine3.14
+FROM python:3.11.3-alpine3.17
 
 RUN apk add --no-cache postgresql-libs \
   && apk add --no-cache --virtual .build-deps curl gcc g++ musl-dev postgresql-dev libffi-dev openldap-dev
